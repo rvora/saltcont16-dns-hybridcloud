@@ -1,5 +1,5 @@
 {% set eth0_ip = grains['ip_interfaces']['eth0'][0] %}
-{% set my_ip = grains.get('os_external_ip', eth0_ip) %}
+{% set my_ip = grains.get('gce_external_ip', eth0_ip) %}
 
 binddns:
   lookup:
