@@ -2,37 +2,6 @@
 {% set my_ip = grains.get('gce_external_ip', eth0_ip) %}
 
 binddns:
-  lookup:
-    config:
-      options:
-        ip4_listen:
-          - any
-        ip6_listen:
-          - ::1
-        additional:
-          - 'allow-query  { any; }'
-          - 'recursion yes'
-      named_conf:
-        controls:
-          - 'inet 127.0.0.1 port 953 allow { 127.0.0.1; } keys { "rndc-key"; };'
-        logging_channels:
-          - channel: simple_log
-            desttype: file
-            path: /var/log/named.log
-            versions: 3
-            size: 5m
-            severity: info
-            print_time: "yes"
-            print_severity: "yes"
-            print_category: "yes"
-        logging_categories:
-          - category: default
-            channels:
-              - simple_log
-          - category: queries
-            channels:
-              - simple_log
-    dnssec_validation: "no"
   forwarders:
     - 8.8.8.8
     - 8.8.4.4
