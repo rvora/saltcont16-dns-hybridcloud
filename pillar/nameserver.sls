@@ -18,7 +18,7 @@ binddns:
         logging_channels:
           - channel: simple_log
             desttype: file
-            path: /var/log/named/named.log
+            path: /var/log/named.log
             versions: 3
             size: 5m
             severity: info
