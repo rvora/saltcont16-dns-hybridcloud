@@ -23,5 +23,6 @@ binddns:
           ttl: 300
           class: A
           data: {{ my_ip }}
+      mine_search_pcre: \.internal$
       zone_recs_from_mine: True
 
