@@ -25,6 +25,7 @@ binddns:
           data: {{ my_ip }}
       mine_search_pcre: .*\.internal
       mine_func: internal_ip
+      mine_result: value
       minion_id_replace:
         - gce:
           - from: .internal
