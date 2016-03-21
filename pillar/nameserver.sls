@@ -24,5 +24,9 @@ binddns:
           class: A
           data: {{ my_ip }}
       mine_search_pcre: \.internal$
+      minion_id_replace:
+        - gce:
+	  - from: .*\.internal$
+	  - to: .saltconf16.cld.cloudopia.co
       zone_recs_from_mine: True
 
