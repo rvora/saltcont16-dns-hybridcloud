@@ -23,11 +23,11 @@ binddns:
           ttl: 300
           class: A
           data: {{ my_ip }}
-      mine_search_pcre: \.internal
+      mine_search_pcre: .internal
       mine_func: internal_ip
       minion_id_replace:
         - gce:
-          - from: .*\.internal$
+          - from: .internal
           - to: .saltconf16.cld.cloudopia.co
       zone_recs_from_mine: True
 
