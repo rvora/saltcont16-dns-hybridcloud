@@ -28,7 +28,7 @@ binddns:
       mine_result: value
       minion_id_replace:
         - gce:
-          - from: .internal
-          - to: .saltconf16.cld.cloudopia.co
+          from: .internal
+          to: .saltconf16.cld.cloudopia.co
       zone_recs_from_mine: True
 
