@@ -23,7 +23,7 @@ binddns:
           ttl: 300
           class: A
           data: {{ my_ip }}
-      mine_search_pcre: \.internal$
+      mine_search_pcre: \.internal
       minion_id_replace:
         - gce:
           - from: .*\.internal$
