@@ -29,6 +29,9 @@ binddns:
       mine_dual_func: external_ip
       mine_dual_prefix: ext-
       minion_id_replace:
+        - comment: ec2
+          from: .compute.internal
+          to: .saltconf16.cld.cloudopia.co
         - comment: gce
           from: .internal
           to: .saltconf16.cld.cloudopia.co
