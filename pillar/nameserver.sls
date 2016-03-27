@@ -25,6 +25,9 @@ binddns:
           data: {{ my_ip }}
       mine_search: .*\.internal
       mine_func: internal_ip
+      mine_dual_records: True
+      mine_dual_func: external_ip
+      mine_dual_prefix: ext-
       minion_id_replace:
         - comment: gce
           from: .internal
