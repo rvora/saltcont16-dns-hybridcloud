@@ -1,0 +1,12 @@
+
+{% set binddns_lookup = salt['grains.filter_by']({
+    'OpenStack Foundation': {
+        'internal_ip': 'os_internal_ip',
+        'external_ip': 'os_external_ip',
+    },
+    'Google': {
+        'internal_ip': 'gce_internal_ip',
+        'external_ip': 'gce_external_ip',
+    },
+}, grain='manufacturer') %}
+
