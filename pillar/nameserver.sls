@@ -24,7 +24,7 @@ binddns:
         replace_list:
           - comment: gce1
             from: ".c."
-            to: ""
+            to: "."
           - comment: gce2
             from: .internal
             to: .gce.c.cloudopia.co
