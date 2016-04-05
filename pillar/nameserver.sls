@@ -21,13 +21,13 @@ binddns:
       mine_dual_prefix: ext-
       minion_id_replace:
       type: regex
-        regex_list:
-          - comment: aws
-            pattern: '.*\.compute.internal$'
-            repl: .aws.c.cloudopia.co
-          - comment: gce
-            pattern: '\.c\.[\w-]+\.internal$'
-            repl: '\1.gce.c.cloudopia.co'
+      regex_list:
+        - comment: aws
+          pattern: '.*\.compute.internal$'
+          repl: .aws.c.cloudopia.co
+        - comment: gce
+          pattern: '\.c\.[\w-]+\.internal$'
+          repl: '\1.gce.c.cloudopia.co'
 #        type: replace
 #        replace_list:
 #          - comment: ec2
