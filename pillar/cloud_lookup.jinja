@@ -1,5 +1,5 @@
 
-{% set binddns_lookup = salt['grains.filter_by']({
+{% set cloud_lookup = salt['grains.filter_by']({
     'EC2': {
         'internal_ip': 'ec2_internal_ip',
         'external_ip': 'ec2_external_ip',

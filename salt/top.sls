@@ -1,6 +1,3 @@
 base:
-  '*':
-    - common
-
   'salt.*':
     - nameserver
