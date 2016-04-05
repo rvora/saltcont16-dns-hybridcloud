@@ -22,15 +22,15 @@ binddns:
       minion_id_replace:
         type: replace
         replace_list:
+          - comment: ec2
+            from: .compute.internal
+            to: .aws.c.cloudopia.co
           - comment: gce1
             from: ".c."
             to: "."
           - comment: gce2
             from: .internal
             to: .gce.c.cloudopia.co
-          - comment: ec2
-            from: .compute.internal
-            to: .aws.c.cloudopia.co
           - comment: openstack1
             from: .openstacklocal
             to: .os.c.cloudopia.co
