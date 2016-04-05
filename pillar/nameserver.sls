@@ -23,10 +23,10 @@ binddns:
       type: regex
       regex_list:
         - comment: aws
-          pattern: '.*\.compute.internal$'
+          pattern: '\.compute.internal$'
           repl: .aws.c.cloudopia.co
         - comment: gce
-          pattern: '\.c\.[\w-]+\.internal$'
+          pattern: '\.c\.([\w-]+)\.internal$'
           repl: '\1.gce.c.cloudopia.co'
 #        type: replace
 #        replace_list:
