@@ -21,6 +21,7 @@ binddns:
       mine_dual_prefix: ext-
       minion_id_replace:
 	type: regex
+        regex_list:
 	  - comment: aws
 	    pattern: '.*\.compute.internal$'
 	    repl: .aws.c.cloudopia.co
