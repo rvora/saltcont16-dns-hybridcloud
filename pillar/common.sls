@@ -5,6 +5,9 @@
 mine_functions:
   # just for fun, we don't use this
   network.ip_addrs: []
+  ip_cloud:
+    mine_function: binddns.ip_cloud
+    corp: c.acme.com
   # we only use ip addresses found using cloud API
   internal_ip:
     mine_function: grains.get
