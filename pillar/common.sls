@@ -7,7 +7,7 @@ mine_functions:
     mine_function: binddns.internal_cloud_ip
     corp: c.acme.com
   external_ip:
-    mine_function: external_cloud_ip.get
+    mine_function: binddns.external_cloud_ip
     corp: c.acme.com
 
 
