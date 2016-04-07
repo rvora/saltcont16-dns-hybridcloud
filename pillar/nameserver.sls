@@ -14,7 +14,7 @@ binddns:
         - owner: ns1
           class: A
           data: {{ my_ip }}
-      mine_search: .*\.internal
+      mine_search: \.*.openstacklocal|\.*.novalocal|.*\.internal|\.c.cloudopia.co
       mine_func: internal_ip
       mine_dual_records: True
       mine_dual_func: external_ip
