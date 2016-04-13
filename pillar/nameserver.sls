@@ -1,23 +1,28 @@
-{% set eth0_ip = grains['ip_interfaces']['eth0'][0] %}
-{% set my_ip = grains.get('gce_external_ip', eth0_ip) %}
-
 binddns:
-  forwarders:
-    - 8.8.8.8
-    - 8.8.4.4
   zones:
-    - create_db_only: False
-      name: c.cloudopia.co
-      contact: rajvor@cloudopia.co
+    - name: c.cloudopia.co
+      contact: admin@cloudopia.co
       soa: ns1
       records:
         - owner: ns1
           class: A
-          data: {{ my_ip }}
-      mine_search: \.*.openstacklocal|\.*.novalocal|.*\.internal|\.c.cloudopia.co
+          data: {{ grains.get('gce_external_ip') }}
+	# static DNS records
+	- www.cloudopia.co
+          class: A
+          data: 53.42.124.5
+	- app.cloudopia.co
+          class: CNAME
+          data: lb-3134552.us-west2.amazonaws.com
+
+      zone_recs_from_mine: True
+
+      # primary records from mine from internal IP
+      mine_search: .*\.openstacklocal|.*\.novalocal|.*\.internal|.*\.c\.cloudopia\.co
       mine_func: internal_ip
+
+      # secondary records from mine from external IP
       mine_dual_records: True
       mine_dual_func: external_ip
       mine_dual_prefix: ext-
-      zone_recs_from_mine: True
 
