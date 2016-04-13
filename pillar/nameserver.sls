@@ -7,13 +7,9 @@ binddns:
         - owner: ns1
           class: A
           data: {{ grains.get('gce_external_ip') }}
-	# static DNS records
 	- www.cloudopia.co
           class: A
           data: 53.42.124.5
-	- app.cloudopia.co
-          class: CNAME
-          data: lb-3134552.us-west2.amazonaws.com
 
       zone_recs_from_mine: True
 
