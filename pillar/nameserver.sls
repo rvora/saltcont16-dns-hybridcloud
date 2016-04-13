@@ -7,7 +7,7 @@ binddns:
         - owner: ns1
           class: A
           data: {{ grains.get('gce_external_ip') }}
-	- owner: www.cloudopia.co
+        - owner: www.cloudopia.co
           class: A
           data: 53.42.124.5
 
