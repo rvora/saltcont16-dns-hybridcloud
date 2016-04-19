@@ -12,7 +12,7 @@ binddns:
 
       # primary records from mine from internal IP
       #mine_search: .*\.openstacklocal|.*\.novalocal|.*\.internal|.*\.c\.cloudopia\.co
-      mine_search: \.*local|\.internal|\.c\.cloudopia\.co
+      mine_search: .*(\..*local|\.internal|\.c\.cloudopia\.co)
       mine_func: internal_ip
 
       # secondary records from mine from external IP
